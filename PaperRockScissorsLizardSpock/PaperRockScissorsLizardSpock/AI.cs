@@ -11,12 +11,15 @@ namespace PaperRockScissorsLizardSpock
         public AI()
         {
             name = "Computer";
-            score = 0;
         }
 
-        public override void ChooseGesture()
+        public override int ChooseGesture()
         {
-            
+            Random random = new Random();
+            int result = random.Next(0, 5);
+            return result;
+
+
         }
     }
 }
