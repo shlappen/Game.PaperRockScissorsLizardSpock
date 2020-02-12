@@ -10,22 +10,33 @@ namespace PaperRockScissorsLizardSpock
     {
         public Human()
         {
-            name = "Player";
-            score = 0;
+
+
         }
 
-        public override void ChooseGesture(Choice choice)
+
+
+        public override void ChooseGesture()
         {
-            //var input = Console.ReadKey();
-            //switch (input.Key)
-            //{
-            //    case ConsoleKey.NumPad0:
-                    
-            //        break;
-            //    default:
-            //}
+            Console.WriteLine("Using the numbers below, please choose your secret gesture");
+            for (int i = 0; i < choices.Count; i++) 
+            {
+                Console.WriteLine(i + ") " + choices[i].name);
+                //}
 
-        }
+                //write line choose gesture
+                // 
+                // gesture = console read line
+                //var input = Console.ReadKey();
+                //switch (input.Key)
+                //{
+                //    case ConsoleKey.NumPad0:
+
+                //        break;
+                //    default:
+                //}
+
+            }
         //{
         //    Console.WriteLine("Please choose your secret gesture");
         //    for(int i = 0; i < )
@@ -37,6 +48,6 @@ namespace PaperRockScissorsLizardSpock
         //    }
         //}
 
-
+        }
     }
 }

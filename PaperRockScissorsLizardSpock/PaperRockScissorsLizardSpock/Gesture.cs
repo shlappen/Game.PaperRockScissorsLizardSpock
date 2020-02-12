@@ -6,19 +6,13 @@ using System.Threading.Tasks;
 
 namespace PaperRockScissorsLizardSpock
 {
-    class Gestures
+    class Gesture
     {
-        public List<Choice> choices;
+        public string name;
 
-        public Gestures()
+        public Gesture(string name)
         {
-            choices = new List<Choice> 
-            {   new Choice("Rock"), 
-                new Choice("Paper"), 
-                new Choice("Scissors"), 
-                new Choice("Lizard"), 
-                new Choice("Spock") 
-            };
+            this.name = name;
         }
     }
 }

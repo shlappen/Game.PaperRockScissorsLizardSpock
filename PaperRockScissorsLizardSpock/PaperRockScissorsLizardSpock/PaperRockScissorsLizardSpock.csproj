@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Choices.cs" />
     <Compile Include="AI.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Gesture.cs" />

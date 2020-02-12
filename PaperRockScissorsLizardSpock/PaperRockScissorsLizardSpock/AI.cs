@@ -14,7 +14,7 @@ namespace PaperRockScissorsLizardSpock
             score = 0;
         }
 
-        public override void ChooseGesture(Choice choice)
+        public override void ChooseGesture()
         {
             
         }
