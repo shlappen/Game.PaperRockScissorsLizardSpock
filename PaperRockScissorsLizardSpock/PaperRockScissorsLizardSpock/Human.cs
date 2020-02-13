@@ -18,58 +18,46 @@ namespace PaperRockScissorsLizardSpock
 
         public override int ChooseGesture()
         {
-            Console.WriteLine("Please choose your gesture.");
             for (int i = 0; i < choices.Count; i++)
             {
-                Console.WriteLine(i + ") " + choices[i].name);
+                Console.WriteLine(i + 1 + ") " + choices[i].name);
             }
-
-            int result = 0;
-            try
+            Console.WriteLine();
+            bool isValid = false;
+            int choice = 0;
+            do
             {
-                int choice = Convert.ToInt32(Console.ReadLine());
-            }
+                string input = Console.ReadLine();
+                Console.Clear();
+                switch (input)
+                {
+                    case "1":
+                        choice = 0;
+                        isValid = true;
+                        break;
+                    case "2":
+                        choice = 1;
+                        isValid = true;
+                        break;
+                    case "3":
+                        choice = 2;
+                        isValid = true;
+                        break;
+                    case "4":
+                        choice = 3;
+                        isValid = true;
+                        break;
+                    case "5":
+                        choice = 4;
+                        isValid = true;
+                        break;
 
-            catch (Exception)
-            {
-                Console.WriteLine("Please only enter 0-4!");
-                return ChooseGesture();
-            }
-
-            return result;
-            //do
-            //{
-            //    string input = Console.ReadLine();
-            //    int choice = Convert.ToInt32(Console.ReadLine());
-            //    switch (input)
-            //    {
-            //        case "0":
-            //            gesture = choices[0];
-            //            isValid = true;
-            //            break;
-            //        case "1":
-            //            gesture = choices[1];
-            //            isValid = true;
-            //            break;
-            //        case "2":
-            //            gesture = choices[2];
-            //            isValid = true;
-            //            break;
-            //        case "3":
-            //            gesture = choices[3];
-            //            isValid = true;
-            //            break;
-            //        case "4":
-            //            gesture = choices[4];
-            //            isValid = true;
-            //            break;
-
-            //        default:
-            //            break;
-            //    }
-            //} while (isValid == false);
-            //return gesture;
-
+                    default:
+                        Console.WriteLine("Please enter a number 1 through 4 to select a gesture");
+                        break;
+                }
+            } while (isValid == false);
+            return choice;
         }
     }
 }

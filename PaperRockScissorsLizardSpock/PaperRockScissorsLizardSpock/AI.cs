@@ -13,13 +13,19 @@ namespace PaperRockScissorsLizardSpock
             name = "Computer";
         }
 
-        public override int ChooseGesture()
+        public int RandomGenerator()
         {
             Random random = new Random();
             int result = random.Next(0, 5);
             return result;
+        }
 
-
+        public override int ChooseGesture()
+        {
+            Random random = new Random();
+            int result = random.Next(0, 5);
+            
+            return result;
         }
     }
 }
